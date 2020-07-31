@@ -31,3 +31,4 @@ stty -ixon
 ulimit -c unlimited
 
 # set -o vi
+tabs -2
