@@ -11,11 +11,11 @@ alias et='emacsclient -t'
 alias ec='emacsclient -c'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-		alias ls='ls -G'
-		alias ll='ls -lFtr'
+  alias ls='ls -G'
+  alias ll='ls -lFtr'
 else
-		alias ls='ls --color=auto'
-		alias ll='ls -alF'
+  alias ls='ls --color=auto'
+  alias ll='ls -alF'
 fi
 alias cnet='cd ~/Projects/netspring'
 alias corg='cd ~/Projects/org'
@@ -25,10 +25,18 @@ alias cdot='cd ~/Projects/dotfiles'
 
 # git
 alias g='git'
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  source /usr/share/bash-completion/completions/git
+fi
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
-  || complete -o default -o nospace -F _git g
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
+    || complete -o default -o nospace -F _git g
+else
+    __git_complete g _git
+fi
+# MacOs
+# Ubuntu
 
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 

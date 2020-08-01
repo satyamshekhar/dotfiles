@@ -1,13 +1,13 @@
 # -*- shell-script -*-
 
-alias dxi='devdocker exec -i --'
-alias dsh='devdocker shell'
-alias dx='devdocker exec --'
+alias dxi='tools/devdocker exec -i --'
+alias dsh='tools/devdocker shell'
+alias dx='tools/devdocker exec --'
 
 _dxcomplete() {
   local currWord=${COMP_WORDS[COMP_CWORD]}
   local IFS=$'\n'
-  COMPLETIONS=($(devdocker exec tools/dxcomplete $currWord || true))
+  COMPLETIONS=($(tools/devdocker exec tools/dxcomplete $currWord || true))
   for ((i=0; i < "${#COMPLETIONS[@]}"; i++)) {
     COMPREPLY[$i]=$(printf '%q' "${COMPLETIONS[$i]}")
   }
