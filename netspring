@@ -1,8 +1,9 @@
 # -*- shell-script -*-
 
-alias dxi='tools/devdocker exec -i --'
-alias dsh='tools/devdocker shell'
-alias dx='tools/devdocker exec --'
+alias devdocker='~/Projects/devdocker/devdocker'
+alias dxi='devdocker exec -i --'
+alias dsh='devdocker shell'
+alias dx='devdocker exec --'
 
 _dxcomplete() {
   local currWord=${COMP_WORDS[COMP_CWORD]}

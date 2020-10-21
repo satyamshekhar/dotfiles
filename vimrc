@@ -6,6 +6,8 @@ set list
 set listchars=tab:..
 set hlsearch
 
+let mapleader=" "
+
 augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber

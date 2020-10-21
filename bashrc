@@ -32,3 +32,6 @@ ulimit -c unlimited
 
 # set -o vi
 tabs -2
+
+# Enable all aliases for Emacs.
+# alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
