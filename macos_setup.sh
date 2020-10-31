@@ -12,11 +12,13 @@ brew install fd
 brew install fzf
 /usr/local/opt/fzf/install
 brew install git
+brew install graphviz
 brew install gnu-sed
 brew install ispell
 brew install ripgrep
 brew install tmux
 brew install shell-check  # For linting shell files in doom emacs.
+brew install graphviz  # For exporting mindmap in org-roam via dot.
 sudo npm install -g marked  # For markdown preview in doom-emacs.
 
 # Setup bash.
@@ -29,7 +31,7 @@ ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 
 # Install Emacs.
-# TODO: Add steps for MacOs.
+brew install emacs-plus@27 --with-no-frame-refocus
 
 # Setup doomemacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/Projects/doom-emacs
