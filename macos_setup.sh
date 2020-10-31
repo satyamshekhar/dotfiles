@@ -6,33 +6,30 @@ set -x
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install bash
-brew install git
-brew install coreutils
-brew install fzf
-brew install ispell
-/usr/local/opt/fzf/install
-brew install coreutils
 brew install clang-format
+brew install coreutils
 brew install fd
+brew install fzf
+/usr/local/opt/fzf/install
+brew install git
 brew install gnu-sed
-# Install shellcheck and marked for Doom emacs.
-brew install shell-check
-sudo npm install -g marked
+brew install ispell
+brew install ripgrep
+brew install tmux
+brew install shell-check  # For linting shell files in doom emacs.
+sudo npm install -g marked  # For markdown preview in doom-emacs.
 
+# Setup bash.
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 sudo /sbin/reboot
+echo "source ~/.bashrc" >> ~/.bash_profile
+echo "source ~/Projects/dotfiles/bashrc" >> ~/.bashrc
+ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
+ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 
-brew install tmux
-
-# vim-polyglot by cloning module
-
-# Setup dud
-cd
-git clone git@github.com:satyamshekhar/dud.git
-mkdir -p ~/.emacs.d/
-ln -s $HOME/Projects/dotfiles/emacs.init.el ~/.emacs.d/init.el
-ln -s $HOME/Projects/dud $HOME/.emacs.d/dud
+# Install Emacs.
+# TODO: Add steps for MacOs.
 
 # Setup doomemacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/Projects/doom-emacs
