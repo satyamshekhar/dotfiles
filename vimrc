@@ -1,10 +1,23 @@
-syntax on
-set number relativenumber
-set tabstop=2
-set shiftwidth=2
+set equalalways " make sure that windows always remain equal in size.
+set incsearch hlsearch ignorecase smartcase " search related
+set t_Co=256  " 256 color terminal
+set wildmenu wildmode=longest,list,full  " better tab completion of file name
+set backspace=indent,eol,start  " enable backspacing over everything
+set ruler  " show line/column numbers
+set showtabline=2  " show tabline at all times
+set nowrap " disable soft/visual line wrapping
+set cursorline colorcolumn=76
+set list listchars=tab:\│\ ,trail:·
 set list
-set listchars=tab:..
+
+colorscheme Tomorrow
+set background=light
+syntax enable
+set number relativenumber
+set tabstop=2 shiftwidth=2 softtabstop=2 indentkeys=<Tab>
 set hlsearch
+set matchpairs+=<:>  " for matching c++ template brackets.
+
 
 let mapleader=" "
 
