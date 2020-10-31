@@ -4,8 +4,9 @@
 # set -x
 
 # Install apt packages.
-sudo apt-get install git coreutils ispell clang-format tmux apt-file \
-  build-essential libgnutls28-dev texinfo shellcheck
+sudo apt-get install \
+     git coreutils  clang-format tmux apt-file build-essential libgnutls28-dev \
+     ispell texinfo shellcheck
 # Install ripgrep, a faster alternative for grep.
 sudo snap install ripgrep --classic
 # Install fd-find, a faster alternative for find.
@@ -16,8 +17,9 @@ sudo dpkg -i /tmp/fd_8.1.1_amd64.deb
 # vim-polyglot by cloning module
 
 # Install marked MarkDown compiler for Doom emacs.
-# sudo npm install -g marked
+sudo npm install -g marked
 
+# Setup bash.
 echo "source ~/Projects/dotfiles/bashrc" >> ~/.bashrc
 ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
@@ -37,13 +39,6 @@ sudo apt install -y autoconf make gcc texinfo libgtk-3-dev libxpm-dev \
     --with-included-regex  --with-zlib
 make -j12
 sudo make install
-
-# Setup dud
-cd
-git clone git@github.com:satyamshekhar/dud.git
-mkdir -p ~/.emacs.d/
-ln -s $HOME/Projects/dotfiles/emacs.init.el ~/.emacs.d/init.el
-ln -s $HOME/Projects/dud $HOME/.emacs.d/dud
 
 # Setup doomemacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/Projects/doom-emacs
