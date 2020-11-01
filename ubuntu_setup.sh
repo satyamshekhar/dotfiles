@@ -6,7 +6,7 @@
 # Install apt packages.
 sudo apt-get install \
      git coreutils  clang-format tmux apt-file build-essential libgnutls28-dev \
-     ispell texinfo shellcheck
+     texinfo shellcheck ispell aspell
 # Install ripgrep, a faster alternative for grep.
 sudo snap install ripgrep --classic
 # Install fd-find, a faster alternative for find.

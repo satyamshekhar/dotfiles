@@ -14,6 +14,7 @@ brew install fzf
 brew install git
 brew install graphviz
 brew install gnu-sed
+brew install aspell
 brew install ispell
 brew install ripgrep
 brew install tmux
