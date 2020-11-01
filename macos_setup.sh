@@ -32,7 +32,8 @@ ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 
 # Install Emacs.
-brew install emacs-plus@27 --with-no-frame-refocus
+brew install emacs-plus@27 --with-no-frame-refocus --with-xwidgets \
+  --with-mailutils --with-dbus
 
 # Setup doomemacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/Projects/doom-emacs
