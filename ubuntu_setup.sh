@@ -23,6 +23,9 @@ sudo npm install -g marked
 echo "source ~/Projects/dotfiles/bashrc" >> ~/.bashrc
 ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
+# Setup Tmux plugin manager
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install Emacs
 pushd ~/Projects
