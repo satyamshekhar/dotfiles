@@ -13,19 +13,22 @@ set list
 colorscheme Tomorrow
 set background=light
 syntax enable
-set number relativenumber
+autocmd FileType * setlocal nonumber norelativenumber
+autocmd FileType hpp setlocal number relativenumber
+autocmd FileType cpp setlocal number relativenumber
+autocmd FileType ipp setlocal number relativenumber
+autocmd FileType java setlocal number relativenumber
 set tabstop=2 shiftwidth=2 softtabstop=2 indentkeys=<Tab>
 set hlsearch
 set matchpairs+=<:>  " for matching c++ template brackets.
 
-
 let mapleader=" "
 
-augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" augroup numbertoggle
+" :  autocmd!
+" :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+" :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
