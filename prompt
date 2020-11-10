@@ -20,6 +20,6 @@ $DarkGreen'$(git branch &>/dev/null;\
 if [ "$?" -eq "0" ]; then \
     echo " [`git rev-parse --abbrev-ref HEAD`]"; \
 fi)'\
-$Cyan'$(if [ -f ~/Projects/dotfiles/host ]; then echo " [`cat ~/Projects/dotfiles/host`]"; fi)'\
+$Magenta'$(if [ -f ~/Projects/dotfiles/host ]; then echo " [`cat ~/Projects/dotfiles/host`]"; fi)'\
 " "$Red"["$Time12h"]"$Color_Off\
 $NewLine">> "
