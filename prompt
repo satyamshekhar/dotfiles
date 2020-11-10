@@ -15,11 +15,11 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 # Uses content in ~/Project/dotfiles/host as the hostname if available.
-export PS1=$NewLine$Yellow$PathShort$Color_Off" "$Red"["$Time12h"]"\
-$IPurple'$(git branch &>/dev/null;\
+export PS1=$NewLine$Blue$PathShort$Color_Off\
+$DarkGreen'$(git branch &>/dev/null;\
 if [ "$?" -eq "0" ]; then \
     echo " [`git rev-parse --abbrev-ref HEAD`]"; \
 fi)'\
 $Cyan'$(if [ -f ~/Projects/dotfiles/host ]; then echo " [`cat ~/Projects/dotfiles/host`]"; fi)'\
-$Blue" !"$HistoryNumber$Color_Off\
+" "$Red"["$Time12h"]"$Color_Off\
 $NewLine">> "
