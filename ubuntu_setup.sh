@@ -26,6 +26,10 @@ ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 # Setup Tmux plugin manager
 mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/flazz/vim-colorschemes ~/Projects/vim-colorschemes
+mkdir -p ~/.vim/colors
+cp ~/Projects/vim-colorschemes/colors/* ~/.vim/colors
+ln -s ~/Projects/dotfiles/tomorrow.tmux ~/.tmux/themes/
 
 # Install Emacs
 pushd ~/Projects
