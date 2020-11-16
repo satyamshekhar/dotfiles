@@ -6,7 +6,7 @@
 # Install apt packages.
 sudo apt-get install \
      git coreutils  clang-format tmux apt-file build-essential libgnutls28-dev \
-     texinfo shellcheck ispell aspell
+     texinfo shellcheck ispell aspell sqlite3 libsqlite3-dev
 # Install ripgrep, a faster alternative for grep.
 sudo snap install ripgrep --classic
 # Install fd-find, a faster alternative for find.
@@ -24,12 +24,14 @@ echo "source ~/Projects/dotfiles/bashrc" >> ~/.bashrc
 ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 ln -s $HOME/Projects/dotfiles/gitconfig ~/.gitconfig
-# Setup Tmux plugin manager
-mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Setup vim
 git clone https://github.com/flazz/vim-colorschemes ~/Projects/vim-colorschemes
 mkdir -p ~/.vim/colors
 cp ~/Projects/vim-colorschemes/colors/* ~/.vim/colors
+
+# Setup tmux
+mkdir -p ~/.tmux/themes
 ln -s ~/Projects/dotfiles/tomorrow.tmux ~/.tmux/themes/
 
 # Install Emacs

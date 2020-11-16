@@ -32,6 +32,15 @@ ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
 ln -s $HOME/Projects/dotfiles/gitconfig ~/.gitconfig
 
+# Setup VIM
+git clone https://github.com/flazz/vim-colorschemes ~/Projects/vim-colorschemes
+mkdir -p ~/.vim/colors
+cp ~/Projects/vim-colorschemes/colors/* ~/.vim/colors
+
+# Setup tmux
+mkdir -p ~/.tmux/themes
+ln -s ~/Projects/dotfiles/tomorrow.tmux ~/.tmux/themes/
+
 # Install Emacs.
 brew install emacs-plus@27 --with-no-frame-refocus --with-xwidgets \
   --with-mailutils --with-dbus
