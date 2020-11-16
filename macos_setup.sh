@@ -30,6 +30,7 @@ echo "source ~/.bashrc" >> ~/.bash_profile
 echo "source ~/Projects/dotfiles/bashrc" >> ~/.bashrc
 ln -s $HOME/Projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/Projects/dotfiles/vimrc ~/.vimrc
+ln -s $HOME/Projects/dotfiles/gitconfig ~/.gitconfig
 
 # Install Emacs.
 brew install emacs-plus@27 --with-no-frame-refocus --with-xwidgets \
