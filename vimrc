@@ -12,7 +12,7 @@ set list
 
 colorscheme Light
 syntax enable
-hi CursorLine cterm=NONE ctermbg=Gray ctermfg=NONE
+hi CursorLine cterm=NONE ctermbg=LightYellow ctermfg=NONE
 hi Visual cterm=NONE ctermbg=LightYellow
 
 autocmd FileType * setlocal nonumber norelativenumber
