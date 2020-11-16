@@ -10,9 +10,11 @@ set cursorline colorcolumn=76
 set list listchars=tab:\│\ ,trail:·
 set list
 
-colorscheme Tomorrow
-set background=light
+colorscheme Light
 syntax enable
+hi CursorLine cterm=NONE ctermbg=Gray ctermfg=NONE
+hi Visual cterm=NONE ctermbg=LightYellow
+
 autocmd FileType * setlocal nonumber norelativenumber
 autocmd FileType hpp setlocal number relativenumber
 autocmd FileType cpp setlocal number relativenumber

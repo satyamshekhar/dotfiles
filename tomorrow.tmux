@@ -15,27 +15,18 @@
 
 ## set status bar
 set -g status-style bg="#605ead"
-# set -g status-style bg=default
-# setw -g window-status-current-style bg="#efefef"
 setw -g window-status-current-style bg="#ffffff"
-# setw -g window-status-current-style fg="#4271ae"
 setw -g window-status-current-style fg="#ffffff"
 
 ## highlight active window
-# setw -g window-style 'bg=#efefef'
-setw -g window-style 'bg=#ffffff'
-setw -g window-active-style 'bg=#ffffff'
-setw -g pane-active-border-style ''
+# # setw -g window-style 'bg=#efefef'
+# setw -g window-style 'bg=#ffffff'
+# setw -g window-active-style 'bg=#ffffff'
+# setw -g pane-active-border-style ''
 
 ## highlight activity in status bar
 setw -g window-status-activity-style fg="#3e999f"
 setw -g window-status-activity-style bg="#ffffff"
-
-## pane border and colors
-set -g pane-active-border-style bg=default
-set -g pane-active-border-style fg="#d6d6d6"
-set -g pane-border-style bg=default
-set -g pane-border-style fg="#d6d6d6"
 
 set -g clock-mode-colour "#4271ae"
 set -g clock-mode-style 12
@@ -50,32 +41,20 @@ set -g message-command-style fg="#000000"
 set -g message-style bg="#2d2d2d"
 set -g message-style fg="#cc99cc"
 
-set -wg mode-style bg="#afd6fd",fg=black
-# set -g mode-style bg="#afd6fd"
-# set -g mode-style fg="#afd6fd"
-
 # right side of status bar holds "[host name] (date time)"
 set -g status-right-length 100
 set -g status-right-style fg=black
 set -g status-right-style bold
-# set -g status-right '#[fg=#f99157,bg=#2d2d2d] %H:%M |#[fg=#6699cc] %y.%m.%d '
 set -g status-right '#[fg=#efefef,bg=#2d2d2d] %m.%d #[fg=#f99157]%H:%M '
 
 # make background window look like white tab
 set-window-option -g window-status-style bg=default
 set-window-option -g window-status-style fg=white
 set-window-option -g window-status-style none
-# set-window-option -g window-status-format '#[fg=#6699cc,bg=colour235] #I #[fg=#999999,bg=#2d2d2d] #W #[default]'
 set-window-option -g status-left "#[fg=#efefef] #S #[default]"
-set-window-option -g window-status-format '#[fg=#ffffff,bg=colour235] #I #[fg=#999999,bg=#2d2d2d] #W #[default]'
+set-window-option -g window-status-format '#[fg=#ffffff,bg=colour235] #I#[fg=#999999,bg=#2d2d2d] #W #[default]'
 set-window-option -g window-status-separator ' '
 
 # make foreground window look like bold yellow foreground tab
 set-window-option -g window-status-current-style none
-# set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I #[fg=#cccccc,bg=#393939] #W #[default]'
-set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I #[fg=#efefef,bg=#393939] #W #[default]'
-
-# active terminal yellow border, non-active white
-set -g pane-border-style bg=default
-set -g pane-border-style fg="#999999"
-set -g pane-active-border-style fg="#f99157"
+set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I#[fg=#f99157,bg=#393939] #W #[default]'
