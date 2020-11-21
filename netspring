@@ -1,6 +1,6 @@
 # -*- shell-script -*-
 
-alias devdocker='~/Projects/devdocker/devdocker'
+alias devdocker='~/Projects/netspring/tools/devdocker'
 alias dxi='devdocker exec -i --'
 alias dsh='devdocker shell'
 alias dx='devdocker exec --'
