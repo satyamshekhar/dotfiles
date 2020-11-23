@@ -20,15 +20,15 @@ __prompt_command() {
   gitBranch=""
   git branch &>/dev/null
   if [ "$?" -eq "0" ]; then
-    gitBranch=$(git rev-parse --abbrev-ref HEAD)
+    gitBranch="[$(git rev-parse --abbrev-ref HEAD)] "
   fi
   # Uses content in ~/Project/dotfiles/host as the hostname if available.
   host=""
   if [ -f ~/Projects/dotfiles/host ]; then
-    host="[$(cat ~/Projects/dotfiles/host)"]
+    host="[$(cat ~/Projects/dotfiles/host)] "
   fi
   PS1="$NewLine$Blue$PathShort$Color_Off "
-  PS1+="$DarkGreen[$gitBranch]$Color_Off "
+  PS1+="$DarkGreen$gitBranch$Color_Off"
   PS1+="$Magenta$host$Color_Off"
   PS1+="$Yellow[$Time12h]$Color_Off "
   if [ $lastCmdExitCode != 0 ]; then
