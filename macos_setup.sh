@@ -18,6 +18,8 @@ brew install aspell
 brew install ispell
 brew install ripgrep
 brew install tmux
+# Is this required?
+# brew install sqlite sqlite3
 brew install shell-check  # For linting shell files in doom emacs.
 brew install graphviz  # For exporting mindmap in org-roam via dot.
 sudo npm install -g marked  # For markdown preview in doom-emacs.

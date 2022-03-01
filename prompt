@@ -28,7 +28,7 @@ __prompt_command() {
     host="[$(cat ~/Projects/dotfiles/host)] "
   fi
   PS1="$NewLine$Blue$PathShort$Color_Off "
-  PS1+="$DarkGreen$gitBranch$Color_Off"
+  PS1+="$Green$gitBranch$Color_Off"
   PS1+="$Magenta$host$Color_Off"
   PS1+="$Yellow[$Time12h]$Color_Off "
   if [ $lastCmdExitCode != 0 ]; then

@@ -12,8 +12,8 @@ set list
 
 colorscheme Light
 syntax enable
-hi CursorLine cterm=NONE ctermbg=LightYellow ctermfg=NONE
-hi Visual cterm=NONE ctermbg=LightYellow
+" hi CursorLine cterm=NONE ctermbg=LightYellow ctermfg=NONE
+" hi Visual cterm=NONE ctermbg=LightYellow
 
 autocmd FileType * setlocal nonumber norelativenumber
 autocmd FileType hpp setlocal number relativenumber
