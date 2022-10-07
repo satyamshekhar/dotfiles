@@ -1,9 +1,31 @@
 #!/bin/bash
 
+# Steps before running this script -
+
+# Update macOS
+#
+# # Install Chrome, Firefox from AppStore
+# # Install Alfred from AppStore
+# # Install Moom from AppStore
+# # Install GoodNotes 5 from AppStore
+# # Install iterm2
+# # Install Karabiner Elements
+# cp com.googlecode.iterm2.plist ~/Library/Preferences/
+# cp Projects/dotfiles/karabiner.json .config/karabiner/karabiner.json
+# brew install bash-completion@2
+
+# Change network name
+#
+# sudo scutil --set HostName xyler
+# sudo scutil --set LocalHostName xyler
+# sudo scutil --set ComputerName xyler
+# dscacheutil -flushcache
+# # Restart computer
+
 set +e
 set -x
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install bash
 brew install clang-format
