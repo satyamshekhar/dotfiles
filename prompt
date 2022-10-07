@@ -26,7 +26,9 @@ __prompt_command() {
   fi
   # Uses content in ~/Project/dotfiles/host as the hostname if available.
   host=""
-  if [ -f ~/Projects/dotfiles/host ]; then
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    host="[$(hostname)] "
+  elif [ -f ~/Projects/dotfiles/host ]; then
     host="[$(cat ~/Projects/dotfiles/host)] "
   fi
   PS1="$NewLine$Blue$PathShort$Color_Off "
