@@ -16,6 +16,8 @@ shopt -s histappend
 
 PROMPT_COMMAND=__prompt_command
 __prompt_command() {
+  # Flush to history file
+  history -a
   lastCmdExitCode="$?"
   gitBranch=""
   git branch &>/dev/null
